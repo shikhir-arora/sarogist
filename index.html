@@ -9,7 +9,7 @@
         $(function() {
           $("#login").on("click", function(e) {
             e.preventDefault();
-            var authenticator = new netlify.default ({});
+            var authenticator = new netlify.default ({site_id: "dbe04d70-092a-40a0-a8a0-968e33327ee2"});
             authenticator.authenticate({provider:"github", scope: "gist"}, function(err, data) {
               if (err) {
                 return $("#output").text("Error Authenticating with GitHub: " + err);
